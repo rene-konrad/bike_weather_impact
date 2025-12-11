@@ -1,71 +1,47 @@
-🚲 San Francisco Bikeshare & Wetteranalyse
+# 🚲 San Francisco Bikeshare & Wetteranalyse
+
 Dieses Projekt analysiert den Einfluss von Wetterbedingungen (Temperatur und Niederschlag) auf die Nutzung von Bikesharing-Angeboten in San Francisco. Ziel war es herauszufinden, unter welchen Bedingungen die Fahrräder am häufigsten genutzt werden und wie sich Wochentage im Vergleich zum Wetter verhalten.
 
-📊 Dashboard Vorschau
-<img width="1061" height="712" alt="Bildschirmfoto 2025-12-12 um 00 49 32" src="https://github.com/user-attachments/assets/88dcc71b-20b2-4c47-9e40-b71582cf4afd" />
+## 📊 Dashboard Vorschau
+
+<img width="1061" height="712" alt="Bildschirmfoto 2025-12-12 um 00 49 32" src="https://github.com/user-attachments/assets/94b189f5-73bc-444a-ae4a-648dcc434b0f" />
 
 Das Dashboard visualisiert:
+* [cite_start]**Durchschnittliche Fahrten pro Monat:** Saisonaler Trend der Nutzung[cite: 7].
+* [cite_start]**Wetter-Einfluss:** Vergleich zwischen regnerischen und trockenen Tagen[cite: 13].
+* [cite_start]**Temperatur-Kategorien:** Detaillierte Aufschlüsselung nach Komfort-Kategorien (z. B. "Ideal", "Warm", "Cold") in Kombination mit Regenstatus [cite: 37-43].
 
-Durchschnittliche Fahrten pro Monat: Saisonaler Trend der Nutzung.
+## 🛠️ Technologie-Stack
 
+* **Google BigQuery:** Data Warehousing und SQL-Abfragen.
+* **SQL:** Datenbereinigung, Transformation und Aggregation.
+* **Looker Studio:** Datenvisualisierung und Reporting.
+* **Datenquellen:**
+  * `bigquery-public-data.san_francisco_bikeshare`
+  * `bigquery-public-data.noaa_gsod` (Wetterdaten 2017)
 
-Wetter-Einfluss: Vergleich zwischen regnerischen und trockenen Tagen .
+## 🧠 Methodik
 
+Die Datenaufbereitung erfolgte über eine SQL-Abfrage, die Rohdaten in interpretierbare Kategorien transformiert:
 
-Temperatur-Kategorien: Detaillierte Aufschlüsselung nach Komfort-Kategorien (z. B. "Ideal", "Warm", "Cold") in Kombination mit Regenstatus .
-
-🛠️ Technologie-Stack
-Google BigQuery: Data Warehousing und SQL-Abfragen.
-
-SQL: Datenbereinigung, Transformation und Aggregation.
-
-Looker Studio: Datenvisualisierung und Reporting.
-
-Datenquellen:
-
-bigquery-public-data.san_francisco_bikeshare
-
-bigquery-public-data.noaa_gsod (Wetterdaten 2017)
-
-🧠 Methodik & SQL-Logik
-Die Datenaufbereitung erfolgt über eine SQL-Abfrage (Temperatur-Analyse.sql), die folgende Schritte durchführt:
-
-1. Datenkategorisierung (CTE daily_counts)
+### 1. Datenkategorisierung
 Um die Daten interpretierbar zu machen, wurden rohe Wetterdaten in verständliche Kategorien unterteilt:
 
-Temperatur-Buckets:
+* **Temperatur-Buckets:** Die Temperatur wurde in 5 Komfort-Stufen eingeteilt, von "Cold (<50°F)" bis "Hot (>75°F)". Die Kategorie "Ideal" wurde beispielsweise als 60-68°F definiert.
+* **Regen-Status:** Ein Tag wird als `Rainy` definiert, wenn der Niederschlagswert (`prcp`) größer als 0.05 ist, andernfalls gilt er als `Dry`.
+* **Wochentag-Filter:** Es wurde zwischen `Weekend` (Samstag/Sonntag) und `Weekday` unterschieden.
 
-Cold (<50°F)
+### 2. Datenverknüpfung
+Die Wetterdaten wurden mit den Fahrdaten (`bikeshare_trips`) über das Datum und mit den Stationsinformationen verknüpft, wobei der Fokus auf einer spezifischen Wetterstation (`724940`) lag.
 
-Cool_Foggy (50-60°F)
+### 3. Aggregation & Filterung
+Die finale Analyse konzentriert sich auf **Wochentage**, da hier das Pendlerverhalten am stärksten ausgeprägt ist. Berechnet wurde der Durchschnitt der täglichen Fahrten, gruppiert nach Monat, Komfort-Kategorie und Regenstatus.
 
-Ideal (60-68°F)
+## 📈 Ergebnisse
 
-Warm (68-75°F)
-
-Hot (>75°F)
-
-Regen-Status: Definiert als Rainy wenn der Niederschlag (prcp) > 0.05 ist, sonst Dry.
-
-Wochentag-Filter: Unterscheidung zwischen Weekend und Weekday.
-
-SQL
-
-CASE
-    WHEN weather_2017.temp >= 60 AND weather_2017.temp < 68 THEN '3_Ideal (60-68°F)'
-    ...
-END AS comfort_category
-2. Datenverknüpfung (Joins)
-Die Wetterdaten wurden mit den Fahrdaten (bikeshare_trips) über das Datum und mit den Stationsinformationen verknüpft, wobei der Fokus auf einer spezifischen Wetterstation (724940) lag.
-
-3. Aggregation & Filterung
-Die finale Abfrage konzentriert sich auf Wochentage (WHERE day_type = 'Weekday'), da hier das Pendlerverhalten am stärksten ausgeprägt ist. Es wird der Durchschnitt der täglichen Fahrten (AVG(count_trips)) berechnet, gruppiert nach Monat, Komfort-Kategorie und Regenstatus.
-
-📈 Ergebnisse
-Basierend auf dem Bericht :
-
-
-Spitzennutzung: Monate wie September und Oktober zeigen hohe Aktivität .
+* [cite_start]**Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität [cite: 21-24].
+* [cite_start]**Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich "Ideal" (60-68°F) liegen[cite: 37].
+* [cite_start]**Temperatur:** Die Kategorien "Ideal" und "Warm" dominieren die Nutzungshäufigkeit, während extreme Kälte die Nutzung deutlich reduziert [cite: 41-43].
 
 
 Wetterpräferenz: Überraschenderweise zeigt die Analyse hohe Durchschnittswerte auch bei regnerischen Bedingungen in bestimmten Temperaturfenstern (z. B. "Ideal Rainy" mit ~3.900 Fahrten).
