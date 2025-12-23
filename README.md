@@ -43,9 +43,3 @@ Die finale Analyse konzentriert sich auf **Wochentage**, da hier das Pendlerverh
 * **Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität.
 * **Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen.
 * **Temperatur:** Die Kategorien im Rahmen von 10°C - 20°C dominieren die Nutzungshäufigkeit, während extreme Kälte die Nutzung deutlich reduziert.
-
-
-Wetterpräferenz: Überraschenderweise zeigt die Analyse hohe Durchschnittswerte auch bei regnerischen Bedingungen in bestimmten Temperaturfenstern.
-
-
-Temperatur: Die Kategorien (10-16°C) und (16-20°F) dominieren die Nutzungshäufigkeit.
