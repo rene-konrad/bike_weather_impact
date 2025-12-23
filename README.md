@@ -1,8 +1,8 @@
-# 🚲 San Francisco Bikeshare & Wetteranalyse
+# San Francisco Bikeshare & Wetteranalyse
 
 Dieses Projekt analysiert den Einfluss von Wetterbedingungen (Temperatur und Niederschlag) auf die Nutzung von Bikesharing-Angeboten in San Francisco. Ziel war es herauszufinden, unter welchen Bedingungen die Fahrräder am häufigsten genutzt werden.
 
-## 📊 Dashboard Vorschau
+## Dashboard Vorschau
 
 <img width="786" height="592" alt="Bildschirmfoto 2025-12-23 um 11 28 44" src="https://github.com/user-attachments/assets/ae81236c-4bbb-4800-a7ad-dbd017a7238a" />
 
@@ -11,7 +11,7 @@ Das Dashboard visualisiert:
 * **Wetter-Einfluss:** Vergleich zwischen regnerischen und trockenen Tagen.
 * **Temperatur-Kategorien:** Detaillierte Aufschlüsselung nach Kategorien in Kombination mit Regenstatus.
 
-## 🛠️ Technologie-Stack
+## Technologie-Stack
 
 * **Google BigQuery:** Data Warehousing und SQL-Abfragen.
 * **SQL:** Datenbereinigung, Transformation und Aggregation.
@@ -20,7 +20,7 @@ Das Dashboard visualisiert:
   * `bigquery-public-data.san_francisco_bikeshare`
   * `bigquery-public-data.noaa_gsod` (Wetterdaten 2017)
 
-## 🧠 Methodik
+## Methodik
 
 Die Datenaufbereitung erfolgte über eine SQL-Abfrage, die Rohdaten in interpretierbare Kategorien transformiert:
 
@@ -41,7 +41,7 @@ Die finale Analyse konzentriert sich auf **Wochentage**, da hier das Pendlerverh
 ## 📈 Ergebnisse
 
 * **Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität.
-* **Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen[cite: 37].
+* **Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen.
 * **Temperatur:** Die Kategorien im Rahmen von 10°C - 20°C dominieren die Nutzungshäufigkeit, während extreme Kälte die Nutzung deutlich reduziert.
 
 
