@@ -38,7 +38,7 @@ Die Wetterdaten wurden mit den Fahrdaten (`bikeshare_trips`) über das Datum und
 ### 3. Aggregation & Filterung
 Die finale Analyse konzentriert sich auf **Wochentage**, da hier das Pendlerverhalten am stärksten ausgeprägt ist. Berechnet wurde der Durchschnitt der täglichen Fahrten, gruppiert nach Monat, Komfort-Kategorie und Regenstatus.
 
-## 📈 Ergebnisse
+## Ergebnisse
 
 * **Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität.
 * **Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen.
