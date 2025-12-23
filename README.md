@@ -4,12 +4,12 @@ Dieses Projekt analysiert den Einfluss von Wetterbedingungen (Temperatur und Nie
 
 ## 📊 Dashboard Vorschau
 
-[Looker_Studio-Berichte_-_23.12.25,_11_03.pdf](https://github.com/user-attachments/files/24308791/Looker_Studio-Berichte_-_23.12.25._11_03.pdf)
+<img width="786" height="592" alt="Bildschirmfoto 2025-12-23 um 11 28 44" src="https://github.com/user-attachments/assets/ae81236c-4bbb-4800-a7ad-dbd017a7238a" />
 
 Das Dashboard visualisiert:
-* [cite_start]**Durchschnittliche Fahrten pro Monat:** Saisonaler Trend der Nutzung[cite: 7].
-* [cite_start]**Wetter-Einfluss:** Vergleich zwischen regnerischen und trockenen Tagen[cite: 13].
-* [cite_start]**Temperatur-Kategorien:** Detaillierte Aufschlüsselung nach Kategorien in Kombination mit Regenstatus [cite: 37-43].
+* **Durchschnittliche Fahrten pro Monat:** Saisonaler Trend der Nutzung.
+* **Wetter-Einfluss:** Vergleich zwischen regnerischen und trockenen Tagen.
+* **Temperatur-Kategorien:** Detaillierte Aufschlüsselung nach Kategorien in Kombination mit Regenstatus.
 
 ## 🛠️ Technologie-Stack
 
@@ -40,9 +40,9 @@ Die finale Analyse konzentriert sich auf **Wochentage**, da hier das Pendlerverh
 
 ## 📈 Ergebnisse
 
-* [cite_start]**Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität [cite: 21-24].
-* [cite_start]**Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen[cite: 37].
-* [cite_start]**Temperatur:** Die Kategorien im Rahmen von 10°C - 20°C dominieren die Nutzungshäufigkeit, während extreme Kälte die Nutzung deutlich reduziert [cite: 41-43].
+* **Spitzennutzung:** Monate wie September und Oktober zeigen besonders hohe Aktivität.
+* **Wetterpräferenz:** Die Analyse zeigt überraschend hohe Durchschnittswerte auch bei regnerischen Bedingungen (z. B. ~3.900 Fahrten), solange die Temperaturen im Bereich  (10-20°C) liegen[cite: 37].
+* **Temperatur:** Die Kategorien im Rahmen von 10°C - 20°C dominieren die Nutzungshäufigkeit, während extreme Kälte die Nutzung deutlich reduziert.
 
 
 Wetterpräferenz: Überraschenderweise zeigt die Analyse hohe Durchschnittswerte auch bei regnerischen Bedingungen in bestimmten Temperaturfenstern.
