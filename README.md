@@ -4,7 +4,7 @@ Dieses Projekt analysiert den Einfluss von Wetterbedingungen (Temperatur und Nie
 
 ## Dashboard Vorschau
 
-<img width="786" height="592" alt="Bildschirmfoto 2025-12-23 um 11 28 44" src="https://github.com/user-attachments/assets/ae81236c-4bbb-4800-a7ad-dbd017a7238a" />
+<img width="753" height="564" alt="image" src="https://github.com/user-attachments/assets/5d935b03-5416-434b-a758-4a371c31fd4f" />
 
 Das Dashboard visualisiert:
 * **Durchschnittliche Fahrten pro Monat:** Saisonaler Trend der Nutzung.
